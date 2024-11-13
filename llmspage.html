@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Textual Landscapes</title>
+    <style>
+        /* 全局样式 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            background-color: #f7f8fc;
+            color: #333;
+        }
+
+        /* 左侧导航栏样式 */
+        .sidebar {
+            width: 200px;
+            background-color: #e0e5eb;
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar h1 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-links a:hover {
+            color: #007acc;
+        }
+        .auth-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .auth-buttons button {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+        }
+        .register-btn {
+            background-color: #717c84;
+        }
+        .login-btn {
+            background-color: #717c84;
+        }
+
+        /* 主体内容样式 */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: flex-start; /* 对齐顶部，保持按钮固定位置 */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .search-bar textarea {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #333;
+            padding: 5px;
+            resize: none; /* 禁用用户调整大小 */
+            height: 100px; /* 初始高度 */
+            max-height: 100px; /* 最大高度 */
+            overflow-y: auto; /* 内容超出时显示滚动条 */
+        }
+        .search-bar textarea::placeholder {
+            color: #aaa;
+        }
+        .search-bar button {
+            background-color: #91969a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            align-self: flex-start; /* 保持按钮在顶部对齐 */
+            height: 40px; /* 固定按钮高度 */
+        }
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .suggestions button {
+            background-color: #f1f1f1;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            width: 45%; /* 让按钮占据一半宽度，实现两行对称布局 */
+        }
+        .suggestions button:hover {
+            background-color: #ddd;
+        }
+        button:hover {
+            background-color: #404345; /* 修改为您想要的悬停颜色 */
+        }
+    </style>
+</head>
+<body>
+
+<!-- 左侧导航栏 -->
+<div class="sidebar">
+    <div>
+        <h1>GeoNarrative Story Telling</h1>
+        <div class="nav-links">
+            <a href="#"><span>🏠</span> Home</a>
+            <a href="#"><span>🌐</span> Discover</a>
+            <a href="#"><span>📚</span> Library</a>
+        </div>
+    </div>
+    <div class="auth-buttons">
+        <button class="register-btn">Register</button>
+        <button class="login-btn">Login</button>
+    </div>
+</div>
+
+<!-- 主体内容 -->
+<div class="main-content">
+    <div class="title">Create your own story within seconds </div>
+    <div class="search-container">
+        <label for="search">Enter your question or prompt:</label>
+        <div class="search-bar">
+            <textarea id="search" placeholder="Ask anything..."></textarea>
+            <button onclick="goToResultPage()">Generate</button>
+        </div>
+        <div class="suggestions">
+            <button>2024 Presidential Campain</button>
+            <button>Where are the stolen bikes go?</button>
+            <button>How can I recycle my waste?</button>
+            <button>Pharmaceutical Industry Trends</button>
+        </div>
+    </div>
+</div>
+<script>
+    function goToResultPage() {
+        // 直接跳转到指定页面的地址
+        window.location.href = 'file:///Users/owenma/Desktop/ai%20venture/demo/viz.html';
+    }
+</script>
+
+</body>
+</html>
